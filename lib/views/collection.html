@@ -324,8 +324,9 @@ renderjson.set_show_to_level({{ collapsibleJSONDefaultUnfold }});
     {% endif %}
 
   </div>
-  <h2>Tools</h2>
+  {% if settings.exportTools %}<h2>Tools</h2>{% endif %}
   <div class="row">
+    {% if settings.exportTools %}
     <div class="col-sm-6 {% if !settings.read_only %}col-lg-3{% endif %}">
       <div class="well">
       <a href="{{ baseHref }}db/{{ dbName }}/export/{{ collectionName }}" class="btn btn-warning btn-block">
@@ -341,6 +342,7 @@ renderjson.set_show_to_level({{ collapsibleJSONDefaultUnfold }});
       </a>
       </div>
     </div>
+    {% endif %}
 
     {% if !settings.read_only %}
       <div class="col-sm-6 col-lg-3">

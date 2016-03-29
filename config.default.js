@@ -126,6 +126,9 @@ module.exports = {
     //readOnly: if readOnly is true, components of writing are not visible.
     readOnly: true,
 
+    //exportTools: if exportTools is false, export buttons are not visible.
+    exportTools: false,
+
     //collapsibleJSON: if set to true, jsons will be displayed collapsible
     collapsibleJSON: true,
 
